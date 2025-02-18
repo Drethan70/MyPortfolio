@@ -1,0 +1,129 @@
+h1 {
+    color:rgb(241, 10, 10);
+    font-size: 40px;
+    text-shadow: rgb(7, 118, 245) 3px 3px;
+}
+
+h3 {
+    color: aquamarine;
+    text-align: center;
+}
+
+
+body {
+    background-image: linear-gradient(to bottom right, purple, red);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Ensure nav takes full width */
+/* Ensure navbar structure is correct */
+nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Fix <ul> alignment */
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto; /* Centering */
+    background-image: linear-gradient(to top left, red, green);
+    height: 60px; /* Fixed height */
+    width: 80vw; /* Adjust to fit properly */
+    align-items: center;
+}
+
+/* Ensure <li> elements fill full height */
+nav ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border: none;
+    padding: 0 10px;
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+/* Ensure <a> elements fill their <li> containers */
+nav ul li a {
+    text-decoration: none;
+    color: yellow;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(14px, 1.5vw, 22px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 0 10px;
+    text-align: center;
+}
+
+/* FIX HOVER EXPANSION ISSUE */
+nav ul li:hover {
+    background-color: black;
+    height: 100%; /* Prevents extra expansion */
+    box-sizing: border-box; /* Ensures no extra space is added */
+}
+
+p {
+    color:yellow
+}
+
+ul {
+    list-style-type:none;
+    border: 2px solid black;
+    margin: 0;
+    padding: 20px;
+} 
+
+li {
+    display: inline;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.profile-pic-bg {
+    background: linear-gradient(45deg, #ff7eb3, #ff758c);
+    border-radius: 50%; 
+    width: 300px; 
+    height: 300px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px; 
+    box-sizing: border-box; 
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 300px; 
+    height: 300px; 
+    border: 1px solid black; 
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid black;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    position: fixed;
+    right: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
