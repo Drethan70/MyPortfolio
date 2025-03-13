@@ -1,40 +1,41 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background-image: linear-gradient(to bottom right, purple, green);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the footer placement */
+}
+
 h1 {
-    color:rgb(241, 10, 10);
-    font-size: 40px;
+    color: rgb(241, 10, 21);
     text-shadow: rgb(7, 118, 245) 3px 3px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 h3 {
-    color: aquamarine;
+    color: rgb(244, 244, 248);
     text-align: center;
 }
 
-
-body {
-    background-image: linear-gradient(to bottom right, purple, red);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/* Ensure nav takes full width */
-/* Ensure navbar structure is correct */
-nav {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-/* Fix <ul> alignment */
 nav ul {
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
     list-style-type: none;
-    padding: 0;
-    margin: 0 auto; /* Centering */
+    border: 2px solid black;
+    padding: 10px;
+    margin: 10px;
     background-image: linear-gradient(to top left, red, green);
-    height: 60px; /* Fixed height */
-    width: 80vw; /* Adjust to fit properly */
-    align-items: center;
+    height: 50px;
 }
 
 /* Ensure <li> elements fill full height */
@@ -48,38 +49,54 @@ nav ul li {
     transition: background-color 0.3s ease; /* Smooth hover transition */
 }
 
-/* Ensure <a> elements fill their <li> containers */
+nav ul li:hover {
+    text-decoration: none;
+    background-color: blue;
+    height: 100%;
+}
+
 nav ul li a {
     text-decoration: none;
     color: yellow;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: clamp(14px, 1.5vw, 22px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    padding: 0 10px;
-    text-align: center;
+    font-size: 20px;
+    justify-content: space-evenly;
 }
 
-/* FIX HOVER EXPANSION ISSUE */
-nav ul li:hover {
-    background-color: black;
-    height: 100%; /* Prevents extra expansion */
-    box-sizing: border-box; /* Ensures no extra space is added */
+#fccmg {
+    background-image: url(FootballGameimg.png); 
+}
+
+/* General button styling */
+button {
+    margin: 20px;
+    width: 150px;
+    height: 150px;
+    background-size: contain; /* Scale image to fit button */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    background-position: center; /* Center background image */
+    border: none;
+    border-radius: 50px; /* Smooth, rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease; /* Animation for hover effect */
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.05); /* Slight zoom effect */
 }
 
 p {
-    color:yellow
+    color: yellow;
+    font-size: 20px;
 }
 
 ul {
-    list-style-type:none;
+    list-style-type: none;
     border: 2px solid black;
     margin: 0;
     padding: 20px;
-} 
+}
 
 li {
     display: inline;
@@ -87,28 +104,37 @@ li {
 
 .image-container {
     display: flex;
+    flex-direction: column; /* Makes elements stack vertically */
     justify-content: center;
     align-items: center;
-    margin: 20px 0;
-}
+    margin: auto; /* Centers the container */
+    flex: 1; /* Ensures it occupies the remaining space */
+    text-align: center;
+  }
+  
+  .profile-title {
+    margin-top: 10px; /* Adds space between the image and the text */
+    color: yellow;
+    font-size: 1.5rem; /* Adjusts the font size for better readability */
+  }
 
 .profile-pic-bg {
-    background: linear-gradient(45deg, #ff7eb3, #ff758c);
-    border-radius: 50%; 
-    width: 300px; 
-    height: 300px; 
+    background-color: red;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0px; 
-    box-sizing: border-box; 
+    padding: 0px;
+    box-sizing: border-box;
 }
 
 .profile-pic {
     border-radius: 50%;
-    width: 300px; 
-    height: 300px; 
-    border: 1px solid black; 
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
 }
 
 .button {
@@ -126,4 +152,15 @@ li {
 
 .button:hover {
     background-color: #0056b3;
+}
+
+/* Footer styling to ensure it's at the bottom */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-image: linear-gradient(to bottom right, green, purple);
+    text-align: left;
+    padding: 10px 0;
+    box-sizing: border-box;
 }
